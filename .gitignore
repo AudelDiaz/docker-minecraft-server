@@ -1,0 +1,4 @@
+.vscode/
+.env
+world/
+*.jar

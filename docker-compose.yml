@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  minecraft-server:
+    container_name: minecraft-server
+    build: ./server
+    volumes:
+      - ./server/world:/usr/src/minecraft/world
+      - ./server/server.properties:/usr/src/minecraft/server.properties
+    ports:
+      - 25565:25565
+      - 19132:19132
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
