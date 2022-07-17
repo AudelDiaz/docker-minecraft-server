@@ -2,9 +2,10 @@ version: '3.8'
 services:
   minecraft-server:
     container_name: minecraft-server
+    image: audeldiaz/minecraft-server:1.19
     build: ./server
     volumes:
-      - ./server/world:/usr/src/minecraft/world
+      - ./world:/usr/src/minecraft/world
       - ./server/server.properties:/usr/src/minecraft/server.properties
     ports:
       - 25565:25565
